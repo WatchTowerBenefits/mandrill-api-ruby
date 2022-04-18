@@ -34,7 +34,7 @@ module Mandrill
       @apikey = apikey
     end
 
-    def call(url, **params)
+    def call(url, params)
       params[:key] = @apikey
       params       = JSON.generate(params)
       response     = @session.post(
